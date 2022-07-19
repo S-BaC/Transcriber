@@ -1,0 +1,66 @@
+/*  A Tiny Custom Library   */
+
+/*
+    Layout
+*/
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.g-1 {  gap: 0.5vw; }
+.g-2 {  gap: 1vw; }
+.g-3 {  gap: 3vw; }
+
+/*
+    Effects
+*/
+.m-auto {   margin: auto;   }
+.m-1 {   margin: 3vmin;   }
+.m-2 {   margin: 5vmin;   }
+.mx-1 {   margin: 0 3vmin 0 3vmin;   }
+.mx-2 {   margin: 0 5vmin 0 5vmin;   }
+.mx-3 {   margin: 0 15vmin 0 15vmin;   }
+.my-1 {   margin: 3vmin 0 3vmin 0;   }
+.my-2 {   margin: 5vmin 0 5vmin 0;   }
+.p-1 {   padding: 3vmin;   }
+.p-2 {   padding: 5vmin;   }
+.p-3 {   padding: 10vmin;   }
+
+.b-round-1 {    border-radius: 7px;    }
+.b-round-2 {    border-radius: 3vmin;    }
+
+.shadow-1 {    box-shadow: 0.1vmin 0.1vmin 1vmin #aaa;   }
+.shadow-2 {    box-shadow: 1vmin 2vmin 3vmin #555;   }
+
+/*
+    Buttons
+*/
+
+.yellow { --btnColor: #FFBE55; }
+.blue { --btnColor: #0B4870; }
+.red { --btnColor: #C74027; }
+
+.btn-solid {
+    background-color: var(--btnColor);
+    color:#fff;
+    border:none;
+    padding:1vmin 2.5vmin;
+    cursor: pointer;
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 2px solid var(--btnColor);
+    color:var(--btnColor);
+    cursor: pointer;
+}
+
+/*
+    Images
+*/
