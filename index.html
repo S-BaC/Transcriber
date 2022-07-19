@@ -10,19 +10,31 @@
     <link rel="stylesheet" href="main.css">
 
 </head>
-<body>
+<body id="home">
     <nav class="flex g-3">
         <div class="logo flex g-1">
             <img src="./images/mic.svg" alt="Logo"/>
             <h1> Transcriber </h1>
         </div>
         <div class="nav-links flex g-3 mx-3">
-            <a href="#">Overview</a>
-            <a href="#">Pricing</a>
-            <a href="#">About</a>
+            <a href="#overview">Overview</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#about">About</a>
             <a href="#">FAQ</a>
         </div>
+        
         <div class="nav-btns flex g-2">
+            <button class="red btn-solid b-round-1 shadow-1"> Get Started </button>
+            <button class="blue btn-solid b-round-1 shadow-1"> Register </button>
+            <button class="blue btn-solid b-round-1 shadow-1"> Log In </button>
+        </div>
+        <label for="mobile-menu" id="mobile-menu-label">Menu</label>
+        <input type="checkbox" id="mobile-menu"/>
+        <div class="nav-mobile flex flex-col g-2">
+            <a href="#overview">Overview</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#about">About</a>
+            <a href="#">FAQ</a>
             <button class="red btn-solid b-round-1 shadow-1"> Get Started </button>
             <button class="blue btn-solid b-round-1 shadow-1"> Register </button>
             <button class="blue btn-solid b-round-1 shadow-1"> Log In </button>
@@ -42,6 +54,110 @@
             </div>
         </div>
     </div>
+
+    <a id="to-up" href="#home">
+        UP
+    </a>
+
+    <main>
+        <h3 id="overview">Overview</h3>
+        <div class="overview-container flex g-2">
+            <div class="overview flex flex-col g-1">
+                <img src="./images/otp-security.svg" alt="Step 1" />
+                <p class="ov-txt">
+                    Get A Free Account <br>
+                    <span>No Credit Card Info Required</span>
+                </p>
+            </div>
+            <div class="overview flex flex-col g-1">
+                <img src="./images/upload-image-ui.svg" alt="Step 1" />
+                <p class="ov-txt">
+                    Upload Your Files <br>
+                    <span>.mp3/.wav/.mpeg</span>
+                </p>
+            </div>
+            <div class="overview flex flex-col g-1">
+                <img src="./images/online-learning-concept.svg" alt="Step 1" />
+                <p class="ov-txt">
+                    Voila, Transcribed! <br>
+                    <span>Fast, Accurate and Reliable</span>
+                </p>
+            </div>
+        </div>
+
+        <div id="pricing" class="pricing-container flex">
+            <table class="pricing b-round-2">
+                <tr><th>
+                        <button class="b-round-1 yellow btn-outline">
+                            FREE
+                        </button>
+                </th></tr>
+                <tr><td> 0.0 USD/month </td></tr>
+                <tr><td>10 minutes per day</td></tr>
+                <tr><td>Standard Quality</td></tr>
+                <tr><td>2 minutes waiting time per audio minute</td></tr>
+            </table>
+            <table class="pricing b-round-2">
+                <tr><th>
+                        <button class="b-round-1 blue btn-outline">
+                            BASIC
+                        </button>
+                </th></tr>
+                <tr><td> 49.99 USD/month </td></tr>
+                <tr><td>90 minutes per month</td></tr>
+                <tr><td>Premium Quality</td></tr>
+                <tr><td>1 minutes waiting time per audio minute</td></tr>
+            </table>
+            <table class="pricing b-round-2">
+                <tr><th>
+                        <button class="b-round-1 red btn-outline">
+                            PRO
+                        </button>
+                </th></tr>
+                <tr><td> 199.99 USD/month </td></tr>
+                <tr><td>Unlimited</td></tr>
+                <tr><td>Premium Quality</td></tr>
+                <tr><td>1 minutes waiting time per audio minute</td></tr>
+                <tr><td>Speaker Recognition</td></tr>
+            </table>
+
+        </div>
+        <div class="flex">
+            <button class="get-started blue btn-outline b-round-1 shadow-1">GET STARTED</button>
+        </div>
+
+        <div id="about" class="about">
+            <h3>About</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, laborum consectetur quaerat odit quod nulla quam praesentium earum, delectus id, vero cum rerum est totam nisi deserunt fugiat optio corrupti nesciunt perferendis aperiam.
+            <br> <br>
+            Temporibus voluptates pariatur sint ducimus, quis repudiandae rerum dignissimos rem perferendis, neque, odio repellendus consequatur nostrum asperiores dolore repellat quod velit est in labore iste consequuntur quidem esse laudantium. Omnis molestias suscipit delectus ullam labore sit ut dolor doloremque a animi, debitis esse maxime reiciendis odio sint optio natus consequatur aliquam iste praesentium distinctio fuga hic repudiandae placeat? Et sequi adipisci, perspiciatis aperiam eos vel minima nostrum.</p>
+        </div>
+    </main>
+
+    <footer>
+        <img src="./images/wave (3).svg" alt="Footer Wave" />
+        <div class="footer-content">
+            <h3>Our Partners</h3>
+            <div class="partners flex g-3">
+                <img src="./images/dummy1.png" alt="Partner Company Logo"/>
+                <img src="./images/dummy2.png" alt="Partner Company Logo"/>
+                <img src="./images/dummy3.png" alt="Partner Company Logo"/>
+                <img src="./images/dummy4.png" alt="Partner Company Logo"/>
+                <img src="./images/dummy5.png" alt="Partner Company Logo"/>
+                <img src="./images/dummy1.png" alt="Partner Company Logo"/>
+                <img src="./images/dummy2.png" alt="Partner Company Logo"/>
+                <img src="./images/dummy3.png" alt="Partner Company Logo"/>
+                <img src="./images/dummy5.png" alt="Partner Company Logo"/>
+            </div>
+            <div class="footer-links flex">
+                <a href="#">Terms and Conditions</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+
 
 </body>
 </html>
