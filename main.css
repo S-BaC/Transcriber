@@ -13,10 +13,16 @@
 
 h1,h2,h3 { font-family: oswald,sans-serif; }
 
+/* NAVIGATION BAR */
+
 body {
     margin: 0;
     padding: 0;
+    --imgWidth: 20vw;
+    --imgHeight: 15vw;
     background-color: var(--color1) !important;
+    overflow-x: hidden;
+
 }
 
 .logo h1 {
@@ -35,7 +41,7 @@ nav {
     background-color: var(--natural2);
     width: 100vw;
     justify-content: space-evenly !important;
-    z-index: 2;
+    z-index: 3;
 
 }
 
@@ -58,47 +64,117 @@ nav {
 
 #mobile-menu-label { display:none; }
 
-/* MAIN VISUAL IMAGES */
-.img-container{
-    margin-top: 20vh;
-    position: relative;
+/* MAIN VISUAL IMAGE CAROUSEL */
+
+.slide-container {
+    width: 90vw;
+    height:100vh;
+    display: flex;
+    align-items: center;
+
+}
+
+.slider-span {
+    margin-top:-100vh;
+
+}
+
+.image-slider{
+    margin-top: auto;
+    width: 100%;
+    position: absolute;
     display: flex;
     justify-content: center;
+    align-items: center;
+    transition: 1s;
 }
 
-.img-container img {
-    height:28vw;
+.slides-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 -30px;
+}
+
+.img{
+    position: relative;
+    width: var(--imgWidth);
+    height: var(--imgHeight);
+    transition: 0.5s;
+}
+
+.button {
     position: absolute;
-    margin: auto;
+    width: var(--imgWidth);
+    height: var(--imgHeight);
+    transition: 0.5s;
+    background-color: rgba(54, 54, 54, 0.589);
 }
 
-#mv-img-1 {
-    left:5vw;
-    transform: scale(0.7);
-    opacity: 0.5;
-    box-shadow: none !important;
-
+#slider-span1:target ~ .image-slider #img1,
+#slider-span1:target ~ .image-slider #button-1{
+    width:var(--imgWidth);
+    height: var(--imgHeight);
+    transform: scale(1.5);
+    z-index: 2;
+    background-color: transparent;
 }
 
-#mv-img-2 {
+#slider-span1:target ~.image-slider{
+    left:10%;
+}
+
+#slider-span1:target ~.image-slider{
+    left:10%;
+}
+
+#slider-span1:target ~ .image-slider #img2,
+#slider-span1:target ~ .image-slider #button-2{
+    width:var(--imgWidth);
+    height: var(--imgHeight);
+    transform: scale(1);
     z-index: 1;
-    /* animation: mv1 5s infinite; */
+    background-color:  rgba(54, 54, 54, 0.589);
+}
+#slider-span3:target ~ .image-slider #img2,
+#slider-span3:target ~ .image-slider #button-2{
+    width:var(--imgWidth);
+    height: var(--imgHeight);
+    transform: scale(1);
+    z-index: 1;
+    background-color:  rgba(54, 54, 54, 0.589);
 }
 
-#mv-img-3 {
-    right:5vw;
-    transform: scale(0.7);
-    opacity: 0.5;
-    box-shadow: none !important;
+.image-slider #img2,
+.image-slider #button-2{
+    width:var(--imgWidth);
+    height: var(--imgHeight);
+    transform: scale(1.5);
+    z-index: 2;
+    background-color: transparent;
 }
 
-.txt-container {
-    position: absolute;
-    top: 29vw;
+#slider-span2:target ~.image-slider{
+    left:0%;
+}
+
+#slider-span3:target ~ .image-slider #img3,
+#slider-span3:target ~ .image-slider #button-3{
+    width:var(--imgWidth);
+    height: var(--imgHeight);
+    transform: scale(1.5);
+    z-index: 2;
+    background-color: transparent;
+}
+
+#slider-span3:target ~.image-slider{
+    left:-10%;
 }
 
 .txt-container h3 {
-    font-weight: 100;
+    width: 100%;
+    margin-top: -10vh;
+    text-align: center;
     color:var(--color2);
 }
 
@@ -106,33 +182,10 @@ nav {
 /* #mv-txt-2 { display: none;  } */
 #mv-txt-3 { display: none;  }
 
-@keyframes mv1 {
-    0%{
-
-    }
-    33.33%{
-        transform: translateX(20vw);
-        opacity: 0.5;
-        box-shadow: none !important;
-    }
-    66.67%{
-        /* left:55vw; */
-        transform: scale(0.7);
-        /* opacity: 0.5; */
-        /* box-shadow: none !important; */
-    }
-    100%{
-        transform: scale(1);
-        opacity: 1;
-        left:50vw;
-    }
-    
-}
-
 /* OVERVIEW */
 
 main {
-    margin-top: 80vh;
+    margin-top: 10vh;
     scroll-behavior: smooth;
 }
 
@@ -181,9 +234,11 @@ main h3 {
 }
 
 .get-started {
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin-bottom: 10vmin;
     transition: 0.5s;
+    padding: 1vmin 2vmin;
+    border:1px solid var(--color2);
 }
 
 .get-started:hover {

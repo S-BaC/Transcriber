@@ -42,17 +42,29 @@
     </nav>
     
     <div class="main-visual">
-        <div class="img-container">
-            <img src="./images/meeting.jpg" alt="Talking" class="shadow-1 b-round-2" id="mv-img-1"/>
-            <img src="./images/headset.jpg" alt="Transcribing" class="shadow-1 b-round-2" id="mv-img-2"/>
-            <img src="./images/teaching.jpg" alt="Teaching" class="shadow-1 b-round-2" id="mv-img-3"/>
-            
-            <div class="txt-container">
-                <h3 id="mv-txt-1">Entire Meeting Records</h3>
-                <h3 id="mv-txt-2">Real-Time Transcription</h3>
-                <h3 id="mv-txt-3">Lectures and Talks</h3>
+        
+        <div class="slide-container">
+            <span class="slider-span" id="slider-span1"></span>
+            <span class="slider-span" id="slider-span2"></span>
+            <span class="slider-span" id="slider-span3"></span>
+    
+            <div class="image-slider">
+                <div class="slides-div" id="slide-1">
+                    <img src="images/meeting.jpg" alt="Entirr Meeting Records" class="img b-round-2" id="img1">
+                    <a href="#slider-span1" class="button b-round-2" id="button-1"></a>
+                </div>
+                <div class="slides-div" id="slide-2">
+                    <img src="images/headset.jpg" alt="Real Time Transcription" class="img b-round-2" id="img2">
+                    <a href="#slider-span2" class="button b-round-2" id="button-2"></a>
+                </div>
+                <div class="slides-div" id="slide-3">
+                    <img src="images/teaching.jpg" alt="Lectures and Talks" class="img b-round-2" id="img3">
+                    <a href="#slider-span3" class="button b-round-2" id="button-3"></a>
+                </div>
             </div>
         </div>
+
+
     </div>
 
     <a id="to-up" href="#">
@@ -126,7 +138,7 @@
 
         </div>
         <div class="flex">
-            <button id="about" class="get-started blue btn-outline b-round-1 shadow-1">GET STARTED</button>
+            <button id="about" class="get-started blue btn-outline b-round-1">GET STARTED</button>
         </div>
 
         <div class="about">
@@ -169,6 +181,8 @@
             }
 
         }
+
+        document.getElementById('slider-span2').click();
     </script>
 
 
