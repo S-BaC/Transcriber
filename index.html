@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="main.css">
 
 </head>
-<body id="home">
+<body>
     <nav class="flex g-3">
         <div class="logo flex g-1">
             <img src="./images/mic.svg" alt="Logo"/>
@@ -55,8 +55,11 @@
         </div>
     </div>
 
-    <a id="to-up" href="#home">
-        UP
+    <a id="to-up" href="#">
+        Go Up
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="#555" viewBox="0 0 24 24" stroke="#555" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M7 11l5-5m0 0l5 5m-5-5v12" />
+        </svg>
     </a>
 
     <main>
@@ -76,7 +79,7 @@
                     <span>.mp3/.wav/.mpeg</span>
                 </p>
             </div>
-            <div class="overview flex flex-col g-1">
+            <divc class="overview flex flex-col g-1">
                 <img src="./images/online-learning-concept.svg" alt="Step 1" />
                 <p class="ov-txt">
                     Voila, Transcribed! <br>
@@ -84,8 +87,8 @@
                 </p>
             </div>
         </div>
-
-        <div id="pricing" class="pricing-container flex">
+        <div id="pricing"></div>
+        <div class="pricing-container flex">
             <table class="pricing b-round-2">
                 <tr><th>
                         <button class="b-round-1 yellow btn-outline">
@@ -123,10 +126,10 @@
 
         </div>
         <div class="flex">
-            <button class="get-started blue btn-outline b-round-1 shadow-1">GET STARTED</button>
+            <button id="about" class="get-started blue btn-outline b-round-1 shadow-1">GET STARTED</button>
         </div>
 
-        <div id="about" class="about">
+        <div class="about">
             <h3>About</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, laborum consectetur quaerat odit quod nulla quam praesentium earum, delectus id, vero cum rerum est totam nisi deserunt fugiat optio corrupti nesciunt perferendis aperiam.
             <br> <br>
@@ -157,6 +160,16 @@
         </div>
     </footer>
 
+    <script>
+        document.onscroll = () => {
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                document.getElementById("to-up").style.display = 'block';
+            } else {
+                document.getElementById("to-up").style.display = 'none';
+            }
+
+        }
+    </script>
 
 
 </body>
