@@ -11,10 +11,6 @@
     --color3: #F15152;
 }
 
-h1,h2,h3 { font-family: oswald,sans-serif; }
-
-/* NAVIGATION BAR */
-
 body {
     margin: 0;
     padding: 0;
@@ -25,9 +21,15 @@ body {
 
 }
 
+/* NAVIGATION BAR */
+
 .logo h1 {
     font-family: oswald,sans-serif;
     color: var(--color3);
+}
+
+.logo h1:hover {
+    color: #FECA01;
 }
 
 .logo img {
@@ -71,12 +73,10 @@ nav {
     height:100vh;
     display: flex;
     align-items: center;
-
 }
 
 .slider-span {
     margin-top:-100vh;
-
 }
 
 .image-slider{
@@ -179,8 +179,20 @@ nav {
 }
 
 #mv-txt-1 { display: none;  }
-/* #mv-txt-2 { display: none;  } */
 #mv-txt-3 { display: none;  }
+.main-visual-mobile { 
+    margin-top: 25vh;
+    color: var(--color2);
+    text-align: center;
+    display: none; 
+
+}
+.main-visual-mobile img {
+    display: block;
+    margin: auto;
+    width: 70vw;
+    height: auto;
+}
 
 /* OVERVIEW */
 
@@ -189,7 +201,7 @@ main {
     scroll-behavior: smooth;
 }
 
-main h3 {
+main h2 {
     text-align: center;
     font-size: 1.2rem;
     color:var(--color2);
@@ -208,6 +220,8 @@ main h3 {
     font-size: 0.8rem;
     font-weight: 200 !important;
 }
+
+/* PRICING */
 
 .pricing-container {
     align-items: flex-start !important;
@@ -245,6 +259,8 @@ main h3 {
     transform: scale(1.1);
 }
 
+/* ABOUT */
+
 .about {
     max-width: 600px;
     margin: auto;
@@ -253,6 +269,7 @@ main h3 {
 }
 
 /* FOOTER */
+
 footer {
     position: relative;
     text-align: center;
@@ -323,7 +340,13 @@ footer a {
 
 @media screen and (max-width:767px) {
     
-    #mobile-menu-label { display:inline; }
+    #mobile-menu-label { 
+        display:inline; 
+    }
+
+    #mobile-menu-label img {
+        width: 7vw;
+    }
 
     .nav-links { display: none; }
     .nav-btns { display: none; }
@@ -332,8 +355,11 @@ footer a {
         display: flex;
     }
 
+    .main-visual-pc { display: none; }
+    .main-visual-mobile { display: block; }
+
     main {
-        margin-top: 30vh;
+        margin-top: 10vh;
     }
 
     .overview-container {
